@@ -6,6 +6,7 @@ const ColorPicker = () => {
 
     const handleColorClick = () => {
         navigator.clipboard.writeText(color)
+        alert(`Color ${color} is copied to clipboard.😍`)
     }
 
     const handleColorChange = (e) => {
@@ -19,7 +20,7 @@ const ColorPicker = () => {
                 <img src={Copy} alt="copy" />
                 <p>Color Selected: <span> {color} </span></p>
             </div>
-            <label htmlFor="color">Pick Color:
+            <label htmlFor="color">Pick a Color:
                 <input type="color" id="color" onChange={handleColorChange} value={color} />
             </label>
         </div>
